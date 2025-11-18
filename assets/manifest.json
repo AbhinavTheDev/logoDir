@@ -1,0 +1,62 @@
+[
+    {
+        "name": "DevTo",
+        "file": "devdotto.svg",
+        "url": "https://dev.to"
+    },
+    {
+        "name": "Ecosia",
+        "file": "ecosia.svg",
+        "url": "https://www.ecosia.org"
+    },
+    {
+        "name": "Excalidraw",
+        "file": "excalidraw.svg",
+        "url": "https://excalidraw.com"
+    },
+    {
+        "name": "Figma",
+        "file": "figma.svg",
+        "url": "https://www.figma.com"
+    },
+    {
+        "name": "Firebase",
+        "file": "firebase.svg",
+        "url": "https://firebase.google.com"
+    },
+    {
+        "name": "Github",
+        "file": "github.svg",
+        "url": "https://github.com"
+    },
+    {
+        "name": "Kaggle",
+        "file": "kaggle.svg",
+        "url": "https://www.kaggle.com"
+    },
+    {
+        "name": "Leetcode",
+        "file": "leetcode.svg",
+        "url": "https://leetcode.com"
+    },
+    {
+        "name": "Linkedin",
+        "file": "linkedin.svg",
+        "url": "https://www.linkedin.com"
+    },
+    {
+        "name": "Peerlist",
+        "file": "peerlist.svg",
+        "url": "https://peerlist.io"
+    },
+    {
+        "name": "Postman",
+        "file": "postman.svg",
+        "url": "https://www.postman.com"
+    },
+    {
+        "name": "X",
+        "file": "x.svg",
+        "url": "https://x.com"
+    }
+]

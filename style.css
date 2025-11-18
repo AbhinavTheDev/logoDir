@@ -1,0 +1,237 @@
+:root {
+  --bg: #0b0b0c;
+  --panel: #121214f0;
+  --text: #e8e8ea;
+  --muted: #a9a9ae;
+  --border: #2a2a2f;
+  --accent: #4f8cff;
+  --card-hover: #19191c;
+  --button-hover: #2f2f34;
+  color-scheme: dark;
+}
+
+/* Light mode */
+:root[data-theme="light"] {
+  --bg: #f7f7f8;
+  --panel: #ffffff;
+  --text: #111114;
+  --muted: #5a5a66;
+  --border: #e7e7ee;
+  --accent: #2f6df6;
+  --card-hover: #f3f4f7;
+  --button-hover: #e7e7ee;
+  color-scheme: light;
+}
+
+/* Auto detect system preference if no manual selection */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --bg: #f7f7f8;
+    --panel: #ffffff;
+    --text: #111114;
+    --muted: #5a5a66;
+    --border: #e7e7ee;
+    --accent: #2f6df6;
+    --card-hover: #f3f4f7;
+    --button-hover: #e7e7ee;
+    color-scheme: light;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.title.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.title {
+  margin: 0;
+  font-family: cursive;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#search {
+  flex: 1;
+  max-width: 520px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+#search::placeholder {
+  color: var(--muted);
+}
+#search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+#themeToggle {
+  margin-left: auto;
+}
+
+#themeIcon {
+  transition: transform 0.3s ease;
+}
+
+:root[data-theme="dark"] #themeIcon {
+  transform: rotate(180deg);
+}
+
+main {
+  padding: 16px;
+}
+
+.grid {
+  --min: 240px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--min), 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s ease, transform 0.05s ease, border-color 0.3s ease;
+}
+.card:hover {
+  background: var(--panel);
+  transform: translateY(-1px);
+}
+
+.thumb {
+  display: grid;
+  place-items: center;
+  padding: 1.6em;
+  aspect-ratio: 16 / 9;
+}
+.thumb img {
+  max-width: 6em;
+  max-height: 6em;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.icon-btn {
+  --size: 32px;
+  width: var(--size);
+  height: var(--size);
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s ease, color 0.3s ease;
+}
+.icon-btn:hover {
+  background-color: var(--button-hover);
+}
+.icon-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+.empty,
+.error {
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.footer {
+  margin-top: auto;
+  padding: 24px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.disclaimer {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  transition: color 0.3s ease;
+}
+
+.disclaimer strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 12px;
+  }
+  
+  .disclaimer {
+    font-size: 12px;
+  }
+}

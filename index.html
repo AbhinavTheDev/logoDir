@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="./assets/stack.svg" type="image/svg">
+  <title>Chinh</title>
+  <link rel="stylesheet" href="./style.css" />
+  <meta name="color-scheme" content="light dark" />
+</head>
+<body>
+  <header class="toolbar">
+    <img class="title icon" src="./assets/stack.svg" alt="stack">
+    <h1 class="title">chinh</h1>
+    <input id="search" type="search" placeholder="Search logos..." aria-label="Search logos" />
+    <button id="themeToggle" class="icon-btn" title="Toggle theme" aria-label="Toggle between light and dark mode">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <circle cx="12" cy="12" r="5" stroke-width="1.6"/>
+        <line x1="12" y1="1" x2="12" y2="3" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="12" y1="21" x2="12" y2="23" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="1" y1="12" x2="3" y2="12" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="21" y1="12" x2="23" y2="12" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <main>
+    <div id="cards" class="grid" aria-live="polite"></div>
+  </main>
+
+  <footer class="footer">
+    <p class="disclaimer">
+      <strong>⚠️ Disclaimer:</strong> Use these logos responsibly. All trademarks and logos are the property of their respective owners. 
+      Please obtain proper permission from the creators or trademark holders before using these logos in your projects.
+    </p>
+  </footer>
+
+  <noscript>Please enable JavaScript to view the logo cards.</noscript>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
