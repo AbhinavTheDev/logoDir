@@ -1,10 +1,10 @@
 :root {
   --bg: #0b0b0c;
-  --panel: #121214f0;
   --text: #e8e8ea;
   --muted: #a9a9ae;
   --border: #2a2a2f;
   --accent: #4f8cff;
+  --card-bg: #191919;
   --card-hover: #19191c;
   --button-hover: #2f2f34;
   color-scheme: dark;
@@ -12,19 +12,19 @@
 
 /* Light mode */
 :root[data-theme="light"] {
-  --bg: #f7f7f8;
-  --panel: #ffffff;
+  --bg: #faf9f5;
   --text: #111114;
   --muted: #5a5a66;
-  --border: #e7e7ee;
+  --border: #b9b9b9;
   --accent: #2f6df6;
+  --card-bg: #faf9f5;
   --card-hover: #f3f4f7;
   --button-hover: #e7e7ee;
   color-scheme: light;
 }
 
 /* Auto detect system preference if no manual selection */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
     --bg: #f7f7f8;
     --panel: #ffffff;
@@ -36,7 +36,7 @@
     --button-hover: #e7e7ee;
     color-scheme: light;
   }
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -85,10 +85,11 @@ body {
   padding: 10px 12px;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: var(--panel);
+  background: var(--card-bg);
   color: var(--text);
   outline: none;
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
 }
 #search::placeholder {
   color: var(--muted);
@@ -106,10 +107,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-:root[data-theme="dark"] #themeIcon {
-  transform: rotate(180deg);
-}
-
 main {
   padding: 16px;
 }
@@ -122,7 +119,7 @@ main {
 }
 
 .card {
-  background: var(--bg);
+  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 6px;
   overflow: clip;
@@ -131,8 +128,7 @@ main {
   transition: background 0.2s ease, transform 0.05s ease, border-color 0.3s ease;
 }
 .card:hover {
-  background: var(--panel);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .thumb {
@@ -142,12 +138,18 @@ main {
   aspect-ratio: 16 / 9;
 }
 .thumb img {
-  max-width: 6em;
+  /* max-width: 6em; */
   max-height: 6em;
   object-fit: contain;
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
 }
-
+/* For dark logos that need inversion in light mode */
+:root[data-theme="dark"] .thumb img[alt*="X "],
+:root[data-theme="dark"] .thumb img[alt*="Github"],
+:root[data-theme="dark"] .thumb img[alt*="Dub.co"],
+:root[data-theme="dark"] .thumb img[alt*="DevTo"] {
+  filter: invert(1) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+}
 .meta {
   display: flex;
   justify-content: space-between;
@@ -230,7 +232,7 @@ main {
   .footer {
     padding: 20px 12px;
   }
-  
+
   .disclaimer {
     font-size: 12px;
   }

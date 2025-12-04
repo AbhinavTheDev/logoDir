@@ -30,11 +30,6 @@
         "url": "https://github.com"
     },
     {
-        "name": "Kaggle",
-        "file": "kaggle.svg",
-        "url": "https://www.kaggle.com"
-    },
-    {
         "name": "Leetcode",
         "file": "leetcode.svg",
         "url": "https://leetcode.com"
@@ -58,5 +53,15 @@
         "name": "X",
         "file": "x.svg",
         "url": "https://x.com"
+    },
+    {
+        "name": "Perplexity",
+        "file": "perplexity.svg",
+        "url": "https://www.perplexity.ai/"
+    },
+    {
+        "name": "Dub.co",
+        "file": "dub.co.svg",
+        "url": "https://app.dub.co/start/links"
     }
 ]
