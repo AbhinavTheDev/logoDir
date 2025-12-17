@@ -63,5 +63,35 @@
         "name": "Dub.co",
         "file": "dub.co.svg",
         "url": "https://app.dub.co/start/links"
+    },
+    {
+        "name": "Microsoft",
+        "file": "microsoft.svg",
+        "url": "https://microsoft.com/"
+    },
+    {
+        "name": "Microsoft Copilot",
+        "file": "copilot.svg",
+        "url": "https://copilot.microsoft.com/"
+    },
+    {
+        "name": "Docker",
+        "file": "docker.svg",
+        "url": "https://docker.com/"
+    },
+    {
+        "name": "AI 1",
+        "file": "ai1.svg",
+        "url": ":blanck"
+    },
+    {
+        "name": "Send",
+        "file": "send.svg",
+        "url": ":blanck"
+    },
+    {
+        "name": "OpenAI",
+        "file": "open-ai.svg",
+        "url": "https://openai.com/"
     }
 ]
