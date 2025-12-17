@@ -85,6 +85,11 @@
         "url": ":blanck"
     },
     {
+        "name": "AI 2",
+        "file": "ai2.svg",
+        "url": ":blanck"
+    },
+    {
         "name": "Send",
         "file": "send.svg",
         "url": ":blanck"
@@ -93,5 +98,30 @@
         "name": "OpenAI",
         "file": "open-ai.svg",
         "url": "https://openai.com/"
+    },
+    {
+        "name": "Meta",
+        "file": "meta.svg",
+        "url": "https://meta.ai/"
+    },
+    {
+        "name": "Gemma",
+        "file": "gemma.svg",
+        "url": "https://ai.google.dev/gemma"
+    },
+    {
+        "name": "DeepSeek",
+        "file": "deepseek.svg",
+        "url": "https://deepseek.com/"
+    },
+    {
+        "name": "Qwen",
+        "file": "qwen.svg",
+        "url": "https://qwenlm.github.io/"
+    },
+    {
+        "name": "Anthropic",
+        "file": "anthropic.svg",
+        "url": "https://anthropic.com/"
     }
 ]
